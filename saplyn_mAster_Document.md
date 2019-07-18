@@ -48,3 +48,40 @@ before they can start entering text.
 * Entries should be private by default. Other options should be added
 in the future, configurable from a menu.
 * Entries should be editable and deletable.
+
+#### First Steps
+One of the first things to consider is whether to use a 
+mono or multi respository structure. I'm inclined to use multiple repositories
+because I want to create a psychological boundary between components, but that 
+comes with some issues, particularly around integration and (this) centralized
+documentation. 
+
+As strange as it sounds, Google uses a monorepo for all their 
+projects. I don't know how I feel about that. Google has some weird practices,
+but it can't be denied that their software is pretty flawless. 
+
+Still, I want to embrace distributed, so I think I'll go multi. I'm thinking 
+I'll set up a central repository for (this) things like integration tests and 
+whatnot, but that will serve as sort of a meta project.
+
+---
+
+Naming, then:
+
+I guess I'll put this in a master-y kinda repo, and add in the integration test 
+stuff here. Call it saplyn ultra or something, then have it require the other 
+elements. Integration CI has to live somewhere as well, why not here. 
+
+At some point, I'd probably want to have a separate repo for high level 
+documentation, which this would go into. Then I'd have a separate repo for 
+integration tests. The problem is each of these (namely the tests) would depend 
+on having the whole suite of repositories available to build, but I guess if 
+they're not, we found a bug.
+
+Should I namespace everything? saplyn_web_frontend, saplyn_android_app, etc? 
+Seems like a pain to navigate, and actually goes against the philosophy. Each
+of the components should be independently functional and testable. That brings 
+up the issue though, how do I get the "ultra" pulling all the right pieces? If 
+this all lives in the public forum? I guess I'm pulling from my own namespace.
+I can make a github account specifically for saplyn; not ideal if I want this 
+to be in a portfolio.
