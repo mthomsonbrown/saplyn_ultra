@@ -174,3 +174,8 @@ it already seems pretty slow...
 
 ### 20190731
 Looks like I had a git hicup and I did make an entry yesterday. There you go...
+
+### 20191223
+Haven't touched this in months, didn't do anything with it, but I want to make a 
+paludarium now, and I want to blog it, so I want to get an MVP of this thing off 
+the ground. Let's see how it goes!
